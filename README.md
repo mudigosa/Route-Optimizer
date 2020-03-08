@@ -1,6 +1,4 @@
-**Project:** Optimizing Travel Itineraries With Machine Learning
-
-**Presentation.** Presentation can be found [here](https://github.com/vlazovskiy/route-optimizer-machine-learning/blob/master/Itinerary%20Optimization%20With%20Machine%20Learning.pdf).
+**Project:** Optimizing Train Routes With Machine Learning
 
 **Project goal.** The goal of my project is to optimize travel routes for a delivery vehicle by using machine learning model predictions. This is a two-component problem: first, I train a machine learning model on the data to predict how long it will take a delivery vehicle to go from point one point to another, and I feed these predictions into a genetic algorithm which decides which is the most time efficient visit order for a given set of points. 
 
@@ -15,7 +13,5 @@ Here is an illustration of my pipeline: data -> machine learning -> optimization
 **Optimization.** For any given set of locations, these location are fed to the machine learning model, which predicts how long it will take to travel between each two given points. Then the algorithm "evolves" to find the visit order which minimizes time spent in transit. 
 
 **Results.** The XGBoost model had an error of 4.8 minutes in estimating a single trip's duration for a motor vehicle. While this may seem acceptable for one trip, the error may get bigger the more locations are visited. The genetic algorithm itself is fairly straightforward, but it must be noted that every genetic algorithm gives an optimal approximation, but not the single best solution there is.
-
-**Acknowledgements.** Big thanks to [this notebook](https://github.com/ZWMiller/PythonProjects/blob/master/genetic_algorithms/evolutionary_algorithm_traveling_salesman.ipynb) for providing the code for the genetic algorithm and making it accessible.
 
 **NOTE.** The original presentation contains a short video demo, which is unavailable in the pdf format.
